@@ -20,3 +20,4 @@ specs:
 replicas: 3
 selector:
    matchLabels:
+      type: front-end
