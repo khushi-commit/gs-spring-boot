@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myfirst-deployment
+  labels:
+      app: myfirst
+      type: frontend
+specs:
+  template:
+    metadata:
+     name: myfirst-pod
+     labels:
+       app: myfirst
+       type: frontend
+    spec:
+      containers:
+      - name: spring-container
+        image: gcr.io/khushboorangari/springapp 
+
+replicas: 3
+selector:
+   matchLabels:
